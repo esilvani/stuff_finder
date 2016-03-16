@@ -1,8 +1,8 @@
 <h1>Classifieds</h1>
 
-<secton>
+<secton class="col-md-6">
   <% @classifieds.each do |classified| %>
-<article>
+<article class="well well-lg">
   <h2> <%= classified.title %> </h2>
 
   <p> <%=classified.description %> </p>
@@ -12,4 +12,17 @@
 </article>
 
   <% end %>
+</section>
+
+<section class"col-md-4">
+  <article class="panel panel-primary">
+    <div class="panel panel-heading">
+      Categories
+    </div>
+    <ul class="panel panel-body">
+      <% @categories.each do |category| %>
+    <li><h3><%= category.name %></h3></li>
+    <% end %>
+    </ul>
+  </article>
 </section>

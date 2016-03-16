@@ -6,6 +6,7 @@ class ClassifiedsController < ApplicationController
 
   def index
     @classifieds = Classified.all
+    @categories = Category.all
   end
 
   def create
